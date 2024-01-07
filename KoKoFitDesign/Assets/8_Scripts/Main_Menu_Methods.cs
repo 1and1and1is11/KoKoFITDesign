@@ -41,10 +41,10 @@ public class Main_Menu_Methods : MonoBehaviour
     }
 
     // fuer den Button "Ja" im Abfragefenster "Name bereits vorhanden. Damit weiterspielen?"
-    // laedt Einstellungsszene
+    // laedt Einstellungsszene (Szene 1)
     public void Ja()
     {
-       SceneManager.LoadSceneAsync("Settings_example"); 
+       SceneManager.LoadSceneAsync(1);
     }
 
     // fuer den Button "X" (Beenden) im Hauptmenue

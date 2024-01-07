@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class Settings_Menu_Methods : MonoBehaviour
 {
     // fuer den Button "Zurueck" in den Einstellungen
-    // laedt Hauptmenueszene
+    // laedt Hauptmenueszene (Szene 0)
     public void Zurueck()
     {
-        SceneManager.LoadSceneAsync("Main_Menu");
+        SceneManager.LoadSceneAsync(0);
     }
 
     // fuer den Button "X" (Beenden) in den Einstellungen
