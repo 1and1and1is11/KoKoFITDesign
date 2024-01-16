@@ -12,14 +12,19 @@ public class Main_Menu_Methods : MonoBehaviour
     public              InputField  Name;
 
     // fuer den Button "Weiter" im Hauptmenue
-    // [TODO] ruft aktuell immer das Abfragefenster auf, dass der Name bereitsvorhanden sei
+    // setzt den Abfragewert auf "wahr", um Aktionen zu ermoeglichen
+    // (etwa das Erscheinen des Abfragefensters)
     public void Weiter()
     {
        Abfragefeld.SetActive(true);
     }
 
-    //
-    //
+    // ruft aktuell immer das Abfragefenster auf
+    // ist Text ins Eingabefeld eingegeben?
+    // Ja:      Fenstertext sagt, dass der Name bereits vorhanden sei;
+    //          es gibt aber keine Pruefung, ob das ueberhaupt der Fall ist
+    // Nein:    Fenstertext sagt, dass kein Name eingegeben worden sei
+    //          und fragt, ob dennoch gespielt werden wolle
     public void Fragetext()
     {
         if (Name.text != "")
@@ -33,14 +38,18 @@ public class Main_Menu_Methods : MonoBehaviour
             
     }
 
-    // fuer den Button "Nein" im Abfragefenster "Name bereits vorhanden. Damit weiterspielen?"
+    // fuer den Button "Nein" im Abfragefenster
+    //      "Name bereits vorhanden. Damit weiterspielen?" -> wenn Text ins Textfeld eingeben wurde
+    //      "Kein Name eingegeben. Trotzdem spielen?" -> wenn kein Text ins Textfeld eingeben wurde
     // versteckt das Abfragefenster wieder
     public void Nein()
     {
        Abfragefeld.SetActive(false);
     }
 
-    // fuer den Button "Ja" im Abfragefenster "Name bereits vorhanden. Damit weiterspielen?"
+    // fuer den Button "Ja" im Abfragefenster
+    //      "Name bereits vorhanden. Damit weiterspielen?" -> wenn Text ins Textfeld eingeben wurde
+    //      "Kein Name eingegeben. Trotzdem spielen?" -> wenn kein Text ins Textfeld eingeben wurde
     // laedt Einstellungsszene (Szene 1)
     public void Ja()
     {
