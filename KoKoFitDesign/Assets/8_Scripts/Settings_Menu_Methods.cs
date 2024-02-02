@@ -13,7 +13,7 @@ public class Settings_Menu_Methods : MonoBehaviour
     public Slider lautstaerke_slider;
     public Text lautstaerke_text;
 
-    // wird ausgeführt, sobald die Szene aufgerufen wird
+    // wird ausgefuehrt, sobald die Szene aufgerufen wird
     // die darin aufgerufenen Methoden bewirken,
     // dass die dynamischen Textfelder der Slider Inhalte zeigen,
     // bevor der Slider bewegt wurde
@@ -38,8 +38,8 @@ public class Settings_Menu_Methods : MonoBehaviour
         Application.Quit();
     }
 
-    // wird der Schwierigkeit-SLider bewegt,
-    // ändert sich die Schwierigkeitsangabe neben dem Slider
+    // wird der Schwierigkeit-Slider bewegt,
+    // aendert sich die Schwierigkeitsangabe neben dem Slider
     public void UpdateSchwierigkeitSlider(float sliderwert)
     {
         switch (sliderwert)
@@ -66,13 +66,13 @@ public class Settings_Menu_Methods : MonoBehaviour
 
     }
 
-    // wird der Runden-SLider bewegt, ändert sich die Zahl neben dem Slider
+    // wird der Runden-SLider bewegt, aendert sich die Zahl neben dem Slider
     public void UpdateRundenSlider(float sliderwert)
     {
         runden_text.text = sliderwert + " ";
     }
 
-    // wird der Lautstaerke-SLider bewegt, ändert sich die Prozentangabe neben dem Slider
+    // wird der Lautstaerke-SLider bewegt, aendert sich die Prozentangabe neben dem Slider
     public void UpdateLautstaerkeSlider(float sliderwert)
     {
         lautstaerke_text.text = sliderwert * 10 + " %";
